@@ -110,12 +110,6 @@ Destroy the infrastructure:
 time ./do destroy
 ```
 
-List this repository dependencies (and which have newer versions):
-
-```bash
-GITHUB_COM_TOKEN='YOUR_GITHUB_PERSONAL_TOKEN' ./renovate.sh
-```
-
 Update the talos extensions to match the talos version:
 
 ```bash
