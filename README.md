@@ -1,6 +1,9 @@
 Forked and some stuff redone, and removed.
 https://github.com/rgl/terraform-proxmox-talos/tree/main
 
+To install all the tools needed, run the script in tools/tools.sh
+
+
 # About
 
 [![Lint](https://github.com/rgl/terraform-proxmox-talos/actions/workflows/lint.yml/badge.svg)](https://github.com/rgl/terraform-proxmox-talos/actions/workflows/lint.yml)
