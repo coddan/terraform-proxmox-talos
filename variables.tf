@@ -111,5 +111,21 @@ variable "worker_count" {
 
 variable "prefix" {
   type    = string
-  default = "talos-example"
+  default = "talos"
 }
+
+variable "git_repo_url" {
+  type = string
+}
+
+variable "git_repo_username" {
+  type = string
+}
+
+variable "git_repo_password" {
+  type = string
+  sensitive = true
+}
+
+
+

@@ -33,6 +33,10 @@ export PROXMOX_VE_USERNAME='root@pam'
 export PROXMOX_VE_PASSWORD='vagrant'
 export AWS_ACCESS_KEY_ID=''
 export AWS_SECRET_ACCESS_KEY=''
+export TF_VAR_git_repo_url=''
+export TF_VAR_git_repo_username='osser'
+export TF_VAR_git_repo_password=''
+
 EOF
 source secrets-proxmox.sh
 ```

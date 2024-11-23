@@ -199,3 +199,4 @@ resource "talos_machine_bootstrap" "talos" {
     talos_machine_configuration_apply.controller,
   ]
 }
+

@@ -38,6 +38,10 @@ terraform {
       source  = "rgl/kustomizer"
       version = "0.0.1"
     }
+    flux = {
+      source  = "fluxcd/flux"
+      version = ">=1.2.0"
+    }
   }
 }
 
@@ -52,4 +56,18 @@ provider "proxmox" {
 }
 
 provider "talos" {
+}
+
+provider "flux" {
+  kubernetes = {
+    config_path = "~/.kube/config"
+  }
+  git = {
+    url = var.git_repo_url
+    http = {
+      username = var.git_repo_username
+      password = var.git_repo_password
+      allow_insecure_http = "true"
+    } 
+  }
 }
