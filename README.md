@@ -1,3 +1,6 @@
+Forked and some stuff redone, and removed.
+https://github.com/rgl/terraform-proxmox-talos/tree/main
+
 # About
 
 [![Lint](https://github.com/rgl/terraform-proxmox-talos/actions/workflows/lint.yml/badge.svg)](https://github.com/rgl/terraform-proxmox-talos/actions/workflows/lint.yml)
