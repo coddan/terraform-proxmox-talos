@@ -78,6 +78,8 @@ export PROXMOX_VE_INSECURE='1'
 export PROXMOX_VE_ENDPOINT="https://$TF_VAR_proxmox_pve_node_address:8006"
 export PROXMOX_VE_USERNAME='root@pam'
 export PROXMOX_VE_PASSWORD='vagrant'
+export AWS_ACCESS_KEY_ID=''
+export AWS_SECRET_ACCESS_KEY=''
 EOF
 source secrets-proxmox.sh
 ```
