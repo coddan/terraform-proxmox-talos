@@ -2,6 +2,8 @@
 .vscode
 terraform.tfvars
 *terraform.tfstate*
+.terraform.lock.hcl
+.tflint.hcl
 tfplan
 *.log
 *.raw
