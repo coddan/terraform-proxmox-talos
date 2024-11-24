@@ -128,4 +128,7 @@ variable "git_repo_password" {
 }
 
 
-
+variable "argocd_domain" {
+  type = string
+  default = "argocd.cedtimes.lan"
+}

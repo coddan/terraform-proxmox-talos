@@ -50,6 +50,10 @@ curl --silent --location "https://github.com/weaveworks/weave-gitops/releases/do
 sudo install /tmp/gitops /usr/local/bin/gitops
 rm /tmp/gitops /tmp/README.md /tmp/LICENSE
 
+curl -sSL -o argocd-linux-amd64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64
+sudo install argocd-linux-amd64 /usr/local/bin/argocd
+rm argocd-linux-amd64
+
 if type dnf; then
 	sudo dnf install qemu -y
 elif type apt; then

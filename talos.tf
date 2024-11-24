@@ -108,6 +108,38 @@ data "talos_machine_configuration" "controller" {
             contents = join("---\n", [
               data.helm_template.cilium.manifest,
               "# Source cilium.tf\n${local.cilium_external_lb_manifest}",
+            ]),
+          },
+          {
+            name = "cert-manager"
+            contents = join("---\n", [
+              yamlencode({
+                apiVersion = "v1"
+                kind       = "Namespace"
+                metadata = {
+                  name = "cert-manager"
+                }
+              }),
+              data.helm_template.cert_manager.manifest,
+              "# Source cert-manager.tf\n${local.cert_manager_ingress_ca_manifest}",
+            ])
+          },
+          {
+            name     = "trust-manager"
+            contents = data.helm_template.trust_manager.manifest
+          },
+          {
+            name = "argocd"
+            contents = join("---\n", [
+              yamlencode({
+                apiVersion = "v1"
+                kind       = "Namespace"
+                metadata = {
+                  name = local.argocd_namespace
+                }
+              }),
+              data.helm_template.argocd.manifest,
+              "# Source argocd.tf\n${local.argocd_manifest}",
             ])
           },
         ],
