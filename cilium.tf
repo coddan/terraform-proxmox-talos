@@ -58,9 +58,17 @@ data "helm_template" "cilium" {
   repository = "https://helm.cilium.io"
   chart      = "cilium"
   # renovate: datasource=helm depName=cilium registryUrl=https://helm.cilium.io
-  version      = "1.16.4"
+  version      = "1.17.0-pre.2"
   kube_version = var.kubernetes_version
   api_versions = []
+  set {
+    name  = "bpf.hostLegacyRouting"
+    value = "false"
+  }
+  set {
+    name  = "bpf.masquerade"
+    value = "true"
+  }
   set {
     name  = "ipam.mode"
     value = "kubernetes"

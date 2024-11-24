@@ -45,6 +45,11 @@ tar -zxvf kubectl-linstor_v${kubectl_linstor_version}_linux_amd64.tar.gz
 sudo install kubectl-linstor /usr/local/bin/kubectl-linstor
 rm kubectl-linstor* LICENSE README.md
 
+weave_gitops_version='0.38.0'
+curl --silent --location "https://github.com/weaveworks/weave-gitops/releases/download/v0.38.0/gitops-$(uname)-$(uname -m).tar.gz" | tar xz -C /tmp
+sudo install /tmp/gitops /usr/local/bin/gitops
+rm /tmp/gitops /tmp/README.md /tmp/LICENSE
+
 if type dnf; then
 	sudo dnf install qemu -y
 elif type apt; then
