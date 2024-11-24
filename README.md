@@ -1,6 +1,9 @@
 Forked and some stuff redone, and removed.
 https://github.com/rgl/terraform-proxmox-talos/tree/main
 
+to not need to work with policis in cilium, enable audit mode instead:
+https://docs.cilium.io/en/latest/security/policy-creation/
+
 To install all the tools needed, run the script in tools/tools.sh
 
 
